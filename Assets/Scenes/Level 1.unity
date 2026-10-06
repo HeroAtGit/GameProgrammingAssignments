@@ -482,7 +482,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8812789420678262133, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
   m_PrefabInstance: {fileID: 3906415519367908238}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1013175219
+--- !u!114 &1013175227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -491,27 +491,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013175218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 962f32afe621c77458e012916855c744, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Coroutine
+  normalSpeed: 3
+  boostSpeed: 8
 --- !u!1 &1291447301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4397382311530578237, guid: ae2bfbfcd0c432347b1f9500c4b8e94d, type: 3}
@@ -644,9 +628,13 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 90f51bfcc9880834a856360365df80bc, type: 2}
+    - target: {fileID: 2680988701525160468, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3957473168430619273, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 3957473168430619273, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -654,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3957473168430619273, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.87
+      value: -3.47
       objectReference: {fileID: 0}
     - target: {fileID: 3957473168430619273, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -688,13 +676,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7549571076014526189, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
+    - {fileID: 4760048078565058443, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8812789420678262133, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1013175219}
+      addedObject: {fileID: 1013175227}
   m_SourcePrefab: {fileID: 100100000, guid: 7d6cc2169a1039a4b9462075f2f6778c, type: 3}
 --- !u!1001 &4733554253231458659
 PrefabInstance:
@@ -787,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4800235434859905362, guid: ae2bfbfcd0c432347b1f9500c4b8e94d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.83
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4800235434859905362, guid: ae2bfbfcd0c432347b1f9500c4b8e94d, type: 3}
       propertyPath: m_LocalRotation.w
